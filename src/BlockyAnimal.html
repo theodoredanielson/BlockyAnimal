@@ -44,6 +44,7 @@
     <!-- UI elements for user interaction -->
     <p><b>Information:</b></p>
     <p id="numdot">XXX </p>
+   <p><b>Control Roach</b></p>
     <p>SCURRY: 
       <button type="button" id="animationLegOnButton">ON</button>
       <button type="button" id="animationLegOffButton">OFF</button>
@@ -52,16 +53,13 @@
     <p>Lower Leg <input type="range" min="0" max="30" value="0" id="lowerLeg"></p>
     <p>Lowerer Leg <input type="range" min="0" max="45" value="0" id="ankleSlide"></p>
 
-   <div class="Dropdown">
-    <button id="DropDown-Button">Controls:</button>
-        <div class="Dropdown-Menu">
-        <ul style="list-style-type:disc;">
-          <li>Click and drag canvas: rotates perspective</li>
-          <li>SCURRY: On to send the cockroach into a scurry animation. Off to stop it.</li>
-          <li>Leg Sliders: Control the angle at which each joint is positioned</li>
-          <li>Shift+Click Canvas: Kill the cockroach (Any input after/during death to resurrect).</li>
-        </ul>
-        </div>
+    <p><b>Control Info:</b></p>
+    <ul style="list-style-type:disc;">
+      <li>Click and drag canvas: rotates perspective</li>
+      <li>SCURRY: On to send the cockroach into a scurry animation. Off to stop it.</li>
+      <li>Leg Sliders: Control the angle at which each joint is positioned</li>
+      <li>Shift+Click Canvas: Kill the cockroach (Any input after/during death to resurrect).</li>
+    </ul>
 
     <script src="../lib/cuon-matrix-cse160.js"></script>
     <script src="../lib/webgl-debug.js"></script>
