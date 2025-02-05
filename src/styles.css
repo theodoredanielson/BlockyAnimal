@@ -1,5 +1,5 @@
 .Dropdown {
-    position: absolute;
+    position: relative;
     display: block;
 }
 #Dropdown-Button {
@@ -9,11 +9,11 @@
 
 .Dropdown-Menu {
     display: none;
-    background-color: green;
+    background-color: white;
     margin-top: 10px;
     position: relative;
 }
 
-.Dropdown:hover .Dropdown-Menu{
+.Dropdown:click .Dropdown-Menu{
     display: block;
 }
