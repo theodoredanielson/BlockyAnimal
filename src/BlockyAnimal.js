@@ -145,6 +145,15 @@ function addActionsForHtmlUI() {
     g_animations.legSwing = false;
   };
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const dropdownButton = document.getElementById("DropDown-Button");
+    const dropdown = document.querySelector(".Dropdown");
+
+    dropdownButton.addEventListener("click", function() {
+        dropdown.classList.toggle("active");
+    });
+  });
+
   canvas.addEventListener('mousedown', function (ev) {
     if (ev.shiftKey) {
       g_pokeAnimation = true;
