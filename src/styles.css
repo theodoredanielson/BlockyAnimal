@@ -5,6 +5,7 @@
 #Dropdown-Button {
     position: relative; 
     display: block;
+    cursor: pointer;
 }
 
 .Dropdown-Menu {
@@ -12,8 +13,10 @@
     background-color: white;
     margin-top: 10px;
     position: relative;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
-.Dropdown:click .Dropdown-Menu{
+.Dropdown.active .Dropdown-Menu{
     display: block;
 }
