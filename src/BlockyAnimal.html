@@ -3,21 +3,25 @@
  EMAIL: tddaniel@ucsc.edu
 
  Notes to Grader:
-  - Earlier steps of the assignment are commented out but preserved to show progression. 
-  - Collaboration: I worked with Sam Morrow. We would discuss videos and follow them along together. I also helped him rotating triangles for his drawn image 
-  - Used ChatGPT to clarify concepts like rainbow hue to RGB that I used for my rainbow brush.
+  - Earlier steps of the assignment are commented out but preserved to show progression.
+  - Collaboration: I worked with Sam Morrow. We would discuss videos and follow them along together.
+  - Used ChatGPT to clarify concepts related to sphere creation.
   - GitHub Copilot occasionally auto-completed parts of this file, but those suggestions were revised as needed.
-  - Had ChatGPT format and add comments to some of my code but that would often result in broken code - which I didn't have time to fix. I also asked Copilot to help with the same thing, but I ran out of free Copilot usage before finishing, so files liek ColoredPoints.js are convoluted and poorly commented.
-Awesomeness:
-  - I added a "Rainbow" brush that acts much like the circle brush, except every triangle that makes it up is a color of the rainbow. It worked sequentially so that the entire rainbow is represented in the circle. Gets better blended the more segments there are.
-  - I added a Hexadecimal color display that shows what color the brush is.
-  - I added a "Randomize Color" button that randomizes the color sliders.
+  - Had ChatGPT format and add comments to some of my code, but that sometimes resulted in broken code—so I had to fix those manually.
+  - I implemented a cockroach using hierarchical transformations and multiple cubes.
+  - Non-cube primitive: SPHERE
+  - poke() kills the cockroach, triggering a special animation sequence.
+  - Sliders allow control over joint angles for realistic movement.
+  - Animation is implemented for leg movement, and a toggle button allows turning it on and off.
+  - Mouse control enables interactive rotation of the cockroach.
+  - Performance optimization ensures at least 10 FPS with an on-screen FPS counter.
  -->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
     <title>Change a Point Color</title>
     <style>
       body {
