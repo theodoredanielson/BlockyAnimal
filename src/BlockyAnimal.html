@@ -1,0 +1,116 @@
+<!-- 
+AUTHOR: Teddy Danielson
+EMAIL: tddaniel@ucsc.edu
+
+Notes to Grader:
+  - Earlier steps of the assignment are commented out but preserved to show progression.
+  - Collaboration: I worked with Sam Morrow. We would discuss videos and follow them along together.
+  - Used ChatGPT to clarify concepts related to sphere creation.
+  - GitHub Copilot occasionally auto-completed parts of this file, but those suggestions were revised as needed.
+  - Had ChatGPT format and add comments to some of my code, but that sometimes resulted in broken code—so I had to fix those manually.
+  - I implemented a cockroach using hierarchical transformations and multiple cubes.
+  - Non-cube primitive: SPHERE
+  - poke() kills the cockroach, triggering a special animation sequence.
+  - Sliders allow control over joint angles for realistic movement.
+  - Animation is implemented for leg movement, and a toggle button allows turning it on and off.
+  - Mouse control enables interactive rotation of the cockroach.
+  - Performance optimization ensures at least 10 FPS with an on-screen FPS counter. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* Outer container: row layout so canvas and controls are side-by-side */
+    #outerContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      /* Align items at the top */
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+      /* Remove default body margins if desired */
+      padding: 0;
+    }
+
+    div {
+      margin-top: 25px;
+      font-size: 20px;
+      align-self: center;
+    }
+
+    /* Canvas on the left, with some spacing on the right */
+    #webgl {
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+
+    /* Controls on the right */
+    #controls {
+      display: flex;
+      flex-direction: column;
+      /* Stack your buttons/sliders vertically */
+    }
+
+    /* Optional: style for your text/paragraphs/buttons, etc. */
+    p,
+    pre {
+      margin: 5px 0;
+    }
+
+    button {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+  </style>
+  <meta charset="utf-8" />
+  <title>Change a Point Color</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+  </style>
+</head>
+
+
+<body onload="main()">
+  <div id="outerContainer">
+    <!-- Canvas element for WebGL rendering -->
+    <canvas id="webgl" width="800" height="800">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <!-- UI elements for user interaction -->
+    <div id="controls">
+      <p><b>Information:</b></p>
+      <p id="numdot">XXX </p>
+      <p>Leg Swing Animation:
+        <button type="button" id="animationLegOnButton">ON</button>
+        <button type="button" id="animationLegOffButton">OFF</button>
+      </p>
+      <p>Upper Leg <input type="range" min="0" max="45" value="0" id="upperLeg"></p>
+      <p>Lower Leg <input type="range" min="0" max="30" value="0" id="lowerLeg"></p>
+      <p>Ankle <input type="range" min="0" max="45" value="0" id="ankleSlide"></p>
+
+    </div>
+  </div>
+
+  <script src="../lib/cuon-matrix-cse160.js"></script>
+  <script src="../lib/webgl-debug.js"></script>
+  <script src="../lib/cuon-utils.js"></script>
+  <script src="Cube.js"></script>
+  <script src="Render.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="StaticVariables.js"></script>
+  <script src="Sphere.js"></script>
+  <script src="Poke.js"></script>
+  <script src="BlockyAnimal.js"></script>
+</body>
+
+</html>
